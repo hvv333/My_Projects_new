@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="heading">Upload Result</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Prediction results:</h2>
+                {{ table|safe }}
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Sentiment Distribution</h2>
+                <div id="pie-chart">{{ chart|safe }}</div>
+            </div>
+        </div>
+        <a href="/" class="btn btn-primary mt-3">Go back</a>
+    </div>
+</body>
+</html>
